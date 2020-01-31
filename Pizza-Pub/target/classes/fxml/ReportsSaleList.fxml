@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pizza.pub.controllers.ReportsSaleListController">
+    <children>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="500.0" spacing="20.0">
+            <children>
+                <Label text="%ReportsSaleList.menuLabel">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="menuTableView" editable="true" maxHeight="402.0" maxWidth="480.0" minHeight="402.0" minWidth="480.0" prefHeight="402.0" prefWidth="480.0">
+                    <columns>
+                        <TableColumn fx:id="menuTableNameColumn" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="%ReportsSaleList.menuTableFirstColumn" />
+                        <TableColumn fx:id="menuTablePriceColumn" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="%ReportsSaleList.menuTableSecondColumn" />
+                        <TableColumn fx:id="menuTableSizeColumn" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="%ReportsSaleList.menuTableThiredColumn" />
+                        <TableColumn fx:id="menuTableSalesColumn" maxWidth="127.0" minWidth="127.0" prefWidth="127.0" text="%ReportsSaleList.menuTableFourthColumn" />
+                    </columns>
+                </TableView>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </VBox>
+        <Line startY="500.0" />
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="500.0" spacing="20.0">
+            <HBox.margin>
+                <Insets left="10.0" right="10.0" />
+            </HBox.margin>
+         <children>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="%ReportsSaleList.realisedSalesLabel">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numberOfRealisedSalesLabel">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER">
+               <children>
+                  <Label text="%ReportsSaleList.canceledSalesLabel">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numberOfCanceledSalesLabel">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children></VBox>
+    </children>
+</HBox>

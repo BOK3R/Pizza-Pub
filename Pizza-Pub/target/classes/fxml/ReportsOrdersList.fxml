@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="500.0" maxWidth="1000.0" minHeight="500.0" minWidth="1000.0" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.pizza.pub.controllers.ReportsOrdersListController">
+    <children>
+        <VBox alignment="TOP_CENTER" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" spacing="20.0">
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+            <children>
+                <Label text="%ReportsOrderList.ordersListLabel">
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="ordersTableView" editable="true" maxHeight="402.0" maxWidth="480.0" minHeight="402.0" minWidth="480.0" prefHeight="402.0" prefWidth="480.0">
+                    <columns>
+                        <TableColumn fx:id="ordersTableNameColumn" maxWidth="170.0" minWidth="170.0" prefWidth="170.0" text="%ReportsOrderList.ordersTableNameColumn" />
+                        <TableColumn fx:id="ordersTableStatusColumn" maxWidth="218.0" minWidth="218.0" prefWidth="218.0" text="%ReportsOrderList.ordersTableStatusColumn" />
+                        <TableColumn fx:id="ordersTableDetailsColumn" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="%ReportsOrderList.ordersTableDetailsColumn" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Button fx:id="refreshButton" mnemonicParsing="false" onAction="#onActionRefreshButton" text="%ReportsOrderList.ordersRefreshButton">
+                    <VBox.margin>
+                        <Insets left="400.0" top="-15.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+        </VBox>
+        <Line endX="-100.0" startX="-100.0" startY="500.0" />
+        <VBox alignment="TOP_CENTER" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0">
+            <children>
+                <Label text="%ReportsOrderList.orderLabel">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label fx:id="currentOrderLabel">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="currentOrderTableView" maxHeight="250.0" maxWidth="480.0" minHeight="250.0" minWidth="480.0" prefHeight="250.0" prefWidth="480.0">
+                    <columns>
+                        <TableColumn fx:id="currentOrderTableNameColumn" maxWidth="240.0" minWidth="240.0" prefWidth="240.0" text="%ReportsOrderList.currentOrderTableNameColumn" />
+                        <TableColumn fx:id="currentOrderTableSizeColumn" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" text="%ReportsOrderList.currentOrderTableSizeColumn" />
+                        <TableColumn fx:id="currentOrderTablePriceColumn" maxWidth="118.0" minWidth="118.0" prefWidth="118.0" text="%ReportsOrderList.currentOrderTablePriceColumn" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</HBox>
